@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f9f9f9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: 'Open Sans';
+  font-weight: bolder;
+  font-size: 48pt;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h4 {
+  font-family: 'Roboto';
+  font-weight: lighter;
+  font-size: 28pt;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.landing-bg {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.landing-blue {
+  position: fixed;
+  top: -35vh;
+  left: -20vw;
+  height: 150vh;
+  width: 100%;
   color: white;
+  background-color: gold;
+  border-right: solid green 50px;
+  transform: rotateZ(20deg);
+  z-index: -1;
 }
 
-.App-link {
-  color: #61dafb;
+
+.landing-img {
+  position: fixed;
+  height: 130vw;
+  max-height: 120vh;
+  left: 48vw;
+  bottom: -10vw;
+  filter: grayscale(100%);
+  z-index: -2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.landing-img-shadow {
+  color: #00458b;
+}
+
+.landing-text {
+  color: white;
+  position: fixed;
+  left: 50px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.landing-button {
+  font-family: "Roboto";
+  font-size: 20pt;
+  background-color: green;
+  border: 4px solid white;
+  border-radius: 0.4rem;
+}
+
+.about-bg {
+  background: url('http://localhost:3000/car.png') no-repeat center center fixed;
+  height: 100% !important;
+}
+
+.landing-button:hover {
+  border: 4px solid lightgray;
+}
+
+@media (min-aspect-ratio: 42/20), (max-width: 991px) {
+  .landing-img {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .landing-blue {
+    transform: rotateZ(0deg);
+    left: 0;
+  }
+  .landing-text {
+    padding-right: 50px;
   }
 }
