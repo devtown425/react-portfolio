@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Contact() {
     return (
         <div>
-            This is the contact page.
+            haoguan200@gmail.com
         </div>
     )
 }
